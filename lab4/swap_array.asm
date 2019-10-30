@@ -190,7 +190,7 @@ doSwap:
 	li $t2, 4
 	la $t3, myArray
 loop:
-	beq $t0, $t2, main_exit
+	beq $t0, $t2, out
 	sll $t4, $t0, 2
 	sll $t5, $t1, 2
 	addu $t4, $t3, $t4
@@ -199,8 +199,9 @@ loop:
 	lw $t7, 0($t5)
 	sw $t6, 0($t5)
 	sw $t7, 0($t4)
-	addiu $t0, 1
-	addiu $t1, -1
+	addi $t0, 1
+	addi $t1, -1
 	j loop
+out:
         # do not remove this last line
         jr $ra
