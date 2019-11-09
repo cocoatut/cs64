@@ -29,7 +29,7 @@ main:
 	move $t0, $v0
 	
 	li $t2,2
-	li $t1,2
+	li $t1,1
 	li $t3,0
 	li $t4,2
 	li $t5,0
